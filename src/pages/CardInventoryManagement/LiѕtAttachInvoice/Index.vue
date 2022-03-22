@@ -3,7 +3,7 @@
     <template v-slot:breadcrumb>
       <div style="display: flex; justify-content: space-between">
         <a-breadcrumb separator=">">
-          <a-breadcrumb-item >Kế toán</a-breadcrumb-item>
+          <a-breadcrumb-item >Giao ca</a-breadcrumb-item>
           <a-breadcrumb-item :class="'active'">Lập bảng kê </a-breadcrumb-item>
         </a-breadcrumb>
         <menu-profile></menu-profile>
@@ -316,8 +316,8 @@ export default {
       loading: false,
       form: {
         thuphivien: '1',
-        ngay: '2021-02-21',
-        ca: '',
+        ngay: '2021-02-22',
+        ca: '1',
         batdauca: '1',
         ketthucca: '1'
       },
@@ -330,7 +330,7 @@ export default {
       lsCa: [
         {
           value: '1',
-          name: 'Ca 1'
+          name: 'Ca 2'
         }
       ],
       lsBatdauca: [
@@ -350,8 +350,8 @@ export default {
       dataListIn: [
         {
           ngay: '22/02/2021',
-          ca: 'ca 2',
-          nhanvien: 'Nguyễn Thanh Vân',
+          ca: 'Ca 2',
+          nhanvien: 'Lê Thanh Nga',
           lan: 'Làn 02',
           batdau: '06:05:00',
           ketthuc: '12:00:00',
@@ -371,7 +371,7 @@ export default {
       dataListOut: [
         {
           ngay: '22/02/2021',
-          ca: 'ca 2',
+          ca: 'Ca 2',
           soluong: '300',
           thanhtien: '12,500,000',
           lan: 'Làn 02',

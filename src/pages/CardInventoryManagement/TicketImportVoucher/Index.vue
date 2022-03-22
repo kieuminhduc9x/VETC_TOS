@@ -3,7 +3,7 @@
     <template v-slot:breadcrumb>
       <div style="display: flex; justify-content: space-between">
         <a-breadcrumb separator=">">
-          <a-breadcrumb-item >Kế toán</a-breadcrumb-item>
+          <a-breadcrumb-item >Quản lý kho vé</a-breadcrumb-item>
           <a-breadcrumb-item :class="'active'">Phiếu nhập vé</a-breadcrumb-item>
         </a-breadcrumb>
         <menu-profile></menu-profile>
@@ -225,7 +225,7 @@
                 </template>
               </a-table>
               <div style="display: flex; justify-content: flex-end;margin-top: 20px ">
-                <a-checkbox :checked="formDetail.inphieunhap" v-model="formDetail.inphieunhap">
+                <a-checkbox :checked="true" v-model="formDetail.inphieunhap">
                   <span>In phiếu nhập</span>
                 </a-checkbox>
               </div>
@@ -287,7 +287,7 @@ export default {
         sophieu: 'PN20022022001',
         phuongthuc: '1',
         nguoinhan: '1',
-        ngaylap: '2022-03-16',
+        ngaylap: '2021-02-22',
         ca: '1',
         sochungtu: '123456789',
         nhaptu: '1',
@@ -342,7 +342,8 @@ export default {
         loaive: undefined,
         tuserial: '',
         denserial: '',
-        soluong: ''
+        soluong: '',
+        inphieunhap: true
       },
       lsLotrinh: [],
       lsLoaive: [],

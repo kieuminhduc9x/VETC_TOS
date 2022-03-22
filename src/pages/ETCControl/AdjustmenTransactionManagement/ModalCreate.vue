@@ -21,6 +21,9 @@
                   v-model="form.magiaodich"
                   @blur="DeepTrimValue(form)"
                 >
+                  <a-tooltip slot="suffix" title="Extra information">
+                    <a-icon type="search" style="color: rgba(0,0,0,.45)" />
+                  </a-tooltip>
                 </a-input>
               </a-form-model-item>
             </a-col>
@@ -32,6 +35,7 @@
                 <a-select
                   v-model="form.trangthaitruoc"
                   :allowClear="true"
+                  :disabled="true"
                   show-search
                   :filterOption="filterSelectOption"
                 >
@@ -49,6 +53,7 @@
                 prop="sogdnoibo"
                 :rules="[]">
                 <a-input
+                  :disabled="true"
                   v-model="form.sogdnoibo"
                   @blur="DeepTrimValue(form)"
                 >
@@ -94,6 +99,7 @@
                 <a-select
                   v-model="form.giavetruoc"
                   :allowClear="true"
+                  :disabled="true"
                   show-search
                   :filterOption="filterSelectOption"
                 >
@@ -110,10 +116,10 @@
                 label="Ghi chú"
                 prop="ghichu"
                 :rules="[]">
-                <a-input
+                <a-textarea
                   v-model="form.ghichu"
                 >
-                </a-input>
+                </a-textarea>
               </a-form-model-item>
             </a-col>
             <a-col :xs="24" :md="12" :lg="12">

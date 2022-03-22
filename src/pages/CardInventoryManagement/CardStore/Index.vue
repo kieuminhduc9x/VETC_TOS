@@ -3,7 +3,7 @@
     <template v-slot:breadcrumb>
       <div style="display: flex; justify-content: space-between">
         <a-breadcrumb separator=">">
-          <a-breadcrumb-item >Kế toán</a-breadcrumb-item>
+          <a-breadcrumb-item >Quản lý kho thẻ</a-breadcrumb-item>
           <a-breadcrumb-item :class="'active'">Kho thẻ </a-breadcrumb-item>
         </a-breadcrumb>
         <menu-profile></menu-profile>

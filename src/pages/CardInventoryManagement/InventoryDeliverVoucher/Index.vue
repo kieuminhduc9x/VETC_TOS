@@ -3,7 +3,7 @@
     <template v-slot:breadcrumb>
       <div style="display: flex; justify-content: space-between">
         <a-breadcrumb separator=">">
-          <a-breadcrumb-item >Kế toán</a-breadcrumb-item>
+          <a-breadcrumb-item >Quản lý kho thẻ</a-breadcrumb-item>
           <a-breadcrumb-item :class="'active'">Phiếu nhập kho thẻ</a-breadcrumb-item>
         </a-breadcrumb>
         <menu-profile></menu-profile>
@@ -177,7 +177,7 @@
                 </template>
               </a-table>
               <div style="display: flex; justify-content: flex-end;margin-top: 20px ">
-                <a-checkbox :checked="formDetail.inphieunhap" v-model="formDetail.inphieunhap">
+                <a-checkbox :checked="true" v-model="formDetail.inphieunhap">
                   <span>In phiếu nhập</span>
                 </a-checkbox>
               </div>
@@ -292,7 +292,7 @@ export default {
       formDetail: {
         thietbi: '1',
         soluong: '',
-        inphieunhap: false
+        inphieunhap: true
       },
       lsThietbi: [
         {

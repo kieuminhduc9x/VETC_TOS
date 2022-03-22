@@ -3,7 +3,7 @@
     <template v-slot:breadcrumb>
       <div style="display: flex; justify-content: space-between">
         <a-breadcrumb separator=">">
-          <a-breadcrumb-item >Kế toán</a-breadcrumb-item>
+          <a-breadcrumb-item >Giao ca</a-breadcrumb-item>
           <a-breadcrumb-item :class="'active'">Xử lý chêch lệch</a-breadcrumb-item>
         </a-breadcrumb>
         <menu-profile></menu-profile>
@@ -48,7 +48,7 @@
             </a-col>
             <a-col :xs="24" :lg="12" :md="12">
               <a-form-model-item
-                label="Bắt đầu ca"
+                label="Bắt đầu"
                 prop="batdauca"
                 style="margin-bottom: 20px!important;">
                 <a-date-picker
@@ -60,7 +60,7 @@
             </a-col>
             <a-col :xs="24" :lg="12" :md="12">
               <a-form-model-item
-                label="Kết thúc ca"
+                label="Kết thúc "
                 prop="ketthucca"
                 style="margin-bottom: 20px!important;">
                 <a-date-picker
@@ -126,6 +126,7 @@
                       prop="tramvao"
                       style="margin-bottom: 20px!important;">
                       <a-select
+                        placeholder="Chọn trạm vào"
                         v-model="formNewSale.tramvao"
                       >
                         <a-select-option v-for="item in lsTramvao" :key="item.value" :value="item.value">
@@ -140,6 +141,7 @@
                       prop="tramra"
                       style="margin-bottom: 20px!important;">
                       <a-select
+                        placeholder="Chọn trạm ra"
                         v-model="formNewSale.tramra"
                       >
                         <a-select-option v-for="item in lsTramra" :key="item.value" :value="item.value">
@@ -148,6 +150,40 @@
                       </a-select>
                     </a-form-model-item>
                   </a-col>
+                </a-row>
+                <a-row :gutter="16" >
+                  <a-col :xs="24" :lg="12" :md="12">
+                    <a-form-model-item
+                      label="Loại xe"
+                      prop="loaixe"
+                      style="margin-bottom: 20px!important;">
+                      <a-select
+                        placeholder="Chọn loại xe"
+                        v-model="formNewSale.loaixe"
+                      >
+                        <a-select-option v-for="item in lsLoaixe" :key="item.value" :value="item.value">
+                          {{ item.name }}
+                        </a-select-option>
+                      </a-select>
+                    </a-form-model-item>
+                  </a-col>
+                  <a-col :xs="24" :lg="12" :md="12">
+                    <a-form-model-item
+                      label="Giá vé"
+                      prop="giave"
+                      style="margin-bottom: 20px!important;">
+                      <a-select
+                        placeholder="Chọn giá vé"
+                        v-model="formNewSale.giave"
+                      >
+                        <a-select-option v-for="item in lsGiave" :key="item.value" :value="item.value">
+                          {{ item.name }}
+                        </a-select-option>
+                      </a-select>
+                    </a-form-model-item>
+                  </a-col>
+                </a-row>
+                <a-row :gutter="16" >
                   <a-col :xs="24" :lg="12" :md="12">
                     <a-form-model-item
                       label="Thời gian bán"
@@ -267,11 +303,21 @@ export default {
         }
       ],
       formNewSale: {
-        tramvao: '',
-        tramra: '',
-        thoigianban: '',
+        tramvao: undefined,
+        tramra: '1',
+        loaixe: undefined,
+        giave: undefined,
+        thoigianban: '2021-02-22 06:05:00',
         soluong: ''
-      }
+      },
+      lsTramra: [
+        {
+          value: '1',
+          name: 'Trạm B'
+        }
+      ],
+      lsLoaixe: [],
+      lsGiave: []
     }
   },
   created () {

@@ -3,7 +3,7 @@
     <template v-slot:breadcrumb>
       <div style="display: flex; justify-content: space-between">
         <a-breadcrumb separator=">">
-          <a-breadcrumb-item >Kế toán</a-breadcrumb-item>
+          <a-breadcrumb-item >Quản lý kho thẻ</a-breadcrumb-item>
           <a-breadcrumb-item :class="'active'">Hủy thẻ </a-breadcrumb-item>
         </a-breadcrumb>
         <menu-profile></menu-profile>
@@ -217,7 +217,7 @@ export default {
       data: [
         {
           rowIndex: '1',
-          thoigian: '2022-02-20',
+          thoigian: '2022-02-20 09:30:20',
           tramvao: 'Trạm A',
           tramra: 'Trạm B',
           biensoxe: '30A-12893',
@@ -229,7 +229,7 @@ export default {
         },
         {
           rowIndex: '2',
-          thoigian: '2022-02-20',
+          thoigian: '2022-02-20 10:00:22',
           tramvao: 'Trạm A',
           tramra: 'Trạm B',
           biensoxe: '14H-97673',
@@ -240,8 +240,8 @@ export default {
           phanloai: 'Lái xe làm mất'
         },
         {
-          rowIndex: '2',
-          thoigian: '2022-02-20',
+          rowIndex: '3',
+          thoigian: '2022-02-20 11:45:30',
           tramvao: 'Trạm A',
           tramra: 'Trạm B',
           biensoxe: '18T-43933',

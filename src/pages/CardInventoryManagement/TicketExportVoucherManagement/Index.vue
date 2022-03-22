@@ -3,7 +3,7 @@
     <template v-slot:breadcrumb>
       <div style="display: flex; justify-content: space-between">
         <a-breadcrumb separator=">">
-          <a-breadcrumb-item >Kế toán</a-breadcrumb-item>
+          <a-breadcrumb-item >Quản lý kho vé</a-breadcrumb-item>
           <a-breadcrumb-item :class="'active'">Quản lý phiếu xuất vé</a-breadcrumb-item>
         </a-breadcrumb>
         <menu-profile></menu-profile>
@@ -77,6 +77,7 @@
                     prop="tungay"
                     style="margin-bottom: 20px!important;">
                     <a-date-picker
+                      placeholder="Chọn thời gian"
                       v-model="form.tungay"
                       format="DD/MM/YYYY"></a-date-picker>
                   </a-form-model-item>
@@ -87,6 +88,7 @@
                     prop="denngay"
                     style="margin-bottom: 20px!important;">
                     <a-date-picker
+                      placeholder="Chọn thời gian"
                       v-model="form.denngay"
                       format="DD/MM/YYYY"></a-date-picker>
                   </a-form-model-item>
@@ -251,13 +253,13 @@ export default {
       columnsDetail,
       form: {
         tram: '1',
-        sophieu: 'PN20022022001',
+        sophieu: '',
         phuongthuc: 'all',
         nguoilap: 'all',
-        tungay: '2021-02-22',
-        denngay: '2021-02-22',
+        tungay: '',
+        denngay: '',
         ca: 'all',
-        sochungtu: '123456789',
+        sochungtu: '',
         xuatden: 'all'
       },
       lsTram: [
@@ -323,21 +325,8 @@ export default {
         {
           rowIndex: '1',
           tram: 'Trạm B',
-          sophieu: 'PN20022022001',
-          sochungtu: '123456789',
-          ngaylap: '2021-02-20',
-          nguoilap: 'Nguyễn Hạnh',
-          nguoigiao: 'Hoàng My',
-          xuatden: 'Hà Thanh Vân',
-          ca: '2',
-          phuongthuc: 'Nhập thẻ mới từ trung tâm',
-          ghichu: ''
-        },
-        {
-          rowIndex: '2',
-          tram: 'Trạm B',
-          sophieu: 'PN20022022001',
-          sochungtu: '123456789',
+          sophieu: 'PX20022022001',
+          sochungtu: '98088121',
           ngaylap: '2021-02-20',
           nguoilap: 'Nguyễn Hạnh',
           nguoigiao: 'Hoàng My',
@@ -346,6 +335,19 @@ export default {
           phuongthuc: 'Nhập thẻ mới từ trung tâm',
           ghichu: ''
         }
+        // {
+        //   rowIndex: '2',
+        //   tram: 'Trạm B',
+        //   sophieu: 'PN20022022001',
+        //   sochungtu: '123456789',
+        //   ngaylap: '2021-02-20',
+        //   nguoilap: 'Nguyễn Hạnh',
+        //   nguoigiao: 'Hoàng My',
+        //   xuatden: 'Hà Thanh Vân',
+        //   ca: '2',
+        //   phuongthuc: 'Nhập thẻ mới từ trung tâm',
+        //   ghichu: ''
+        // }
       ],
       dataDetail: [
         {
