@@ -325,14 +325,14 @@ export default {
         {
           rowIndex: '1',
           tram: 'Trạm B',
-          sophieu: 'PX20022022001',
-          sochungtu: '98088121',
+          sophieu: 'PX2111000124',
+          sochungtu: '01112333123',
           ngaylap: '2021-02-20',
           nguoilap: 'Nguyễn Hạnh',
           nguoigiao: 'Hoàng My',
           xuatden: 'Hà Thanh Vân',
           ca: '2',
-          phuongthuc: 'Nhập thẻ mới từ trung tâm',
+          phuongthuc: 'Xuất vé cho nhân viên',
           ghichu: ''
         }
         // {

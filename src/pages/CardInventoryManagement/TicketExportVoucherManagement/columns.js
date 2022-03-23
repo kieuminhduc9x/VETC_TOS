@@ -37,7 +37,7 @@ export default [
     scopedSlots: { customRender: 'sochungtu' },
     align: 'left',
     ellipsis: true,
-    width: 120
+    width: 150
   },
   {
     title: 'Ngày lập',

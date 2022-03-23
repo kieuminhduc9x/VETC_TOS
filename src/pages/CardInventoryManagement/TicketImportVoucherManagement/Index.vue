@@ -325,8 +325,8 @@ export default {
         {
           rowIndex: '1',
           tram: 'Trạm B',
-          sophieu: 'PN20022022001',
-          sochungtu: '123456789',
+          sophieu: 'PN00012220001',
+          sochungtu: '0001123000012',
           ngaylap: '2021-02-20',
           nguoilap: 'Nguyễn Hạnh',
           nguoinhan: 'Hoàng My',

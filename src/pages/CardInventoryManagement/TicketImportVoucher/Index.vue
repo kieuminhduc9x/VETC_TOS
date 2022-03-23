@@ -284,12 +284,12 @@ export default {
       columns,
       form: {
         donvi: '1',
-        sophieu: 'PN20022022001',
+        sophieu: 'PN0001222200001',
         phuongthuc: '1',
         nguoinhan: '1',
         ngaylap: '2021-02-22',
         ca: '1',
-        sochungtu: '123456789',
+        sochungtu: '012000123222',
         nhaptu: '1',
         ghichu: ''
       },
